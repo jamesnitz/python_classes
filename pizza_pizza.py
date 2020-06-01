@@ -4,11 +4,12 @@ class Pizza:
     self.crust_size = ""
     self.style = ""
     self.toppings = []
+    self.order_name = ""
   def add_toppings(self, topping):
     self.toppings.append(topping)
 
   def print_order(self):
-    order = f'I would like a {self.crust_size}-inch{" hand-tossed" if self.hand_tossed else ""} {self.style} style pie wiff '
+    order = f'{self.order_name} would like a {self.crust_size}-inch{" hand-tossed" if self.hand_tossed else ""} {self.style} style pie wiff '
     for topping in self.toppings:
       order += f'{topping}, '
     else:
@@ -17,6 +18,7 @@ class Pizza:
 
 lil_sleazers = Pizza()
 lil_sleazers.crust_size = 16
+lil_sleazers.order_name = "James"
 lil_sleazers.hand_tossed = True
 lil_sleazers.style = 'ny'
 lil_sleazers.add_toppings("banana peps")
