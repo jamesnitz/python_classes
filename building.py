@@ -1,12 +1,12 @@
 import datetime
 # URBAN PLANNER 1
 class Building:
-  def __init__(self, name, address, stories):
+  def __init__(self, name, address, stories, owner):
     self.building_name = name
     self.address = address
     self.stories = stories
     self.date_constructed = ""
-    self.owner = ""
+    self.owner = owner
 
 #   def purchase(self, owner):
 #     self.owner = owner
